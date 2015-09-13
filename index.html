@@ -16,8 +16,10 @@
     </section>
 
     <section class='add-item'>
-        <input type="text" id='add-to-to-do-list' placeholder="eg. 'wash the dishes'">
-        <input type="submit" class="add-item-input" value="Add" onclick='addToToDoList()'>
+      <div class="form-holder">
+        <input type="text" class='text-input' id='add-to-to-do-list' placeholder="type your task here">
+        <button class="add-item-input" value="Add" onclick='addToToDoList()'>
+      </div>
     </section>
 
     <section class='to-do' >
@@ -25,7 +27,6 @@
         To Do:
       </h3>
       <ul id='to-do-list'>
-        nothing yet!
       </ul>
     </section>
 
@@ -34,7 +35,6 @@
         Done:
       </h3>
       <ul id='done-list'>
-        nothing yet!
       </ul>
     </section>
   </body>

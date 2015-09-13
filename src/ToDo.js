@@ -53,10 +53,10 @@ function updateToDoList(){
       toDoLister
       +="<li>"
       +toDo.toDoList[item]
-      +"<button id='tick' onclick='addToDoneList(\""
+      +"<button class='tick' onclick='addToDoneList(\""
       +toDo.toDoList[item]
       +"\")'>"
-      +"x"
+      +"done"
       +"</li>";
   }
 	document.getElementById('to-do-list').innerHTML = toDoLister;
@@ -72,7 +72,7 @@ function updateDoneList(){
       +"<button id='delete' onclick='deleteFromDoneList(\""
       +toDo.doneList[item]
       +"\")'>"
-      +"Delete"
+      +"dismiss"
       +"</li>";
   }
 	document.getElementById('done-list').innerHTML = doneLister;
