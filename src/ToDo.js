@@ -25,6 +25,7 @@ function addToToDoList(){
 	var newItem = document.getElementById('add-to-to-do-list').value;
   toDo.addItem(newItem);
   updateToDoList();
+  document.getElementById('add-to-to-do-list').value='';
 }
 
 function addToDoneList(doneItem){
