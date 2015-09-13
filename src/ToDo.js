@@ -13,7 +13,7 @@ ToDo.prototype.tickItem = function(toDoItem) {
   if (index >= 0) {
     this.toDoList.splice( index, 1 );
   }
-  this.doneList.push(toDoItem);
+  this.doneList.unshift(toDoItem);
 	return this.doneList;
 };
 
@@ -27,9 +27,8 @@ function addToToDoList(){
   updateToDoList();
 }
 
-function addToDoneList(){
-  var doneItem = document.getElementById('tick').value;
-  toDo.tickItem(doneItem.replace(' done',''));
+function addToDoneList(doneItem){
+  toDo.tickItem(doneItem);
   updateToDoList();
   updateDoneList();
 }
@@ -38,16 +37,7 @@ function updateToDoList(){
   var toDoLister = '';
   var item;
   for (item in toDo.toDoList) {
-      toDoLister
-      +="<li id='to-do-item' value='"
-      + toDo.toDoList[item]
-      +"'>"
-      + toDo.toDoList[item]
-      +"<input type='submit' id='tick' class='done-button' value='"
-      + toDo.toDoList[item]
-      +" done' onclick='addToDoneList()'>"
-      +"</li>"
-      ;
+      toDoLister +="<li>"+toDo.toDoList[item]+"<button id='tick' onclick='addToDoneList(\""+toDo.toDoList[item]+"\")'>"+"x"+"</li>";
   }
 	document.getElementById('to-do-list').innerHTML = toDoLister;
 };
