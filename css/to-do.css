@@ -6,17 +6,26 @@
 
 body {
   font-family: 'Arial Rounded MT Bold', Arial;
-  background-color: #DEE5E5;
+  background-color: #F5CB5C;
 }
 
 h3 {
   text-decoration: underline;
+  margin-left: 2px;
 }
 
 button {
-  background-color: #DEE5E5;
   border: 0;
+  background-color: inherit;
 }
+
+li {
+  font-size: 5px;
+  margin-left: 4px;
+
+}
+
+
 
 .header {
   font-family: 'Arial Rounded MT Bold', Arial;
@@ -29,16 +38,25 @@ button {
   background-color: #17B890;
 }
 
+.add-item-input {
+  font-family: 'Arial Rounded MT Bold', Arial;
+}
+
 .text-input {
   font-family: 'Arial Rounded MT Bold', Arial;
   background-color: #17B890;
   color: #5E807F;
   width: 100%;
   border: 0px;
+  text-align: center;
 }
 
 .form-holder {
   font-family: 'Arial Rounded MT Bold', Arial;
+}
+
+.section-title{
+  margin-left: 2px;
 }
 
 .to-do, .done {
@@ -46,11 +64,17 @@ button {
   background-color: #9DC5BB;
 }
 
+.to-do-item, .done-item {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
 .tick {
   border: 3px;
 }
 
 .done {
+  padding-bottom: 4px;
 }
 
 
@@ -105,16 +129,24 @@ table {
 
 ::-webkit-input-placeholder {
    color: #DEE5E5;
+   font-size: 10px;
+   text-align: center;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    color: #DEE5E5;
+   font-size: 10px;
+   text-align: center;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #DEE5E5;
+   font-size: 10px;
+   text-align: center;
 }
 
 :-ms-input-placeholder {
    color: #DEE5E5;
+   font-size: 10px;
+   text-align: center;
 }

@@ -51,12 +51,12 @@ function updateToDoList(){
   var item;
   for (item in toDo.toDoList) {
       toDoLister
-      +="<li>"
+      +="<li class='to-do-item'>"
       +toDo.toDoList[item]
       +"<button class='tick' onclick='addToDoneList(\""
       +toDo.toDoList[item]
       +"\")'>"
-      +"done"
+      +"x"
       +"</li>";
   }
 	document.getElementById('to-do-list').innerHTML = toDoLister;
@@ -67,13 +67,21 @@ function updateDoneList(){
   var item;
   for (item in toDo.doneList) {
       doneLister
-      +="<li id='done-item'>"
+      +="<li class='done-item'>"
       + toDo.doneList[item]
       +"<button id='delete' onclick='deleteFromDoneList(\""
       +toDo.doneList[item]
       +"\")'>"
-      +"dismiss"
+      +"x"
       +"</li>";
   }
 	document.getElementById('done-list').innerHTML = doneLister;
 };
+
+document.onkeydown=function(evt){
+    var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+    if(keyCode == 13)
+    {
+      addToToDoList()
+    }
+}
