@@ -5,7 +5,7 @@
     <title>To Do</title>
     <link rel="stylesheet" href="css/to-do.css">
     <script type="text/javascript" src="src/ToDo.js"></script>
-    <script type="text/javascript" src="src/app.js"></script>
+    <!-- <script type="text/javascript" src="src/app.js"></script> -->
   </head>
 
   <body>
@@ -16,28 +16,26 @@
     </section>
 
     <section class='add-item'>
-      <form action="">
-        <input type="text" placeholder="eg. 'wash the dishes'">
-        <input type="submit" class="add-item-input" value="Add">
-      </form>
+        <input type="text" id='add-to-to-do-list' placeholder="eg. 'wash the dishes'">
+        <input type="submit" class="add-item-input" value="Add" onclick='addToToDoList()'>
     </section>
 
-    <section class='to-do'>
+    <section class='to-do' >
       <h3>
-        To Do
-
-GET WORKING ON THIS http://www.tizag.com/javascriptT/javascript-innerHTML.php
-
+        To Do:
       </h3>
+      <ul id='to-do-list'>
+        nothing yet!
+      </ul>
     </section>
 
     <section class='done'>
       <h3>
-        Done
-
-        GET WORKING ON THIS http://www.tizag.com/javascriptT/javascript-innerHTML.php
-
+        Done:
       </h3>
+      <ul id='done-list'>
+        nothing yet!
+      </ul>
     </section>
   </body>
 </html>
