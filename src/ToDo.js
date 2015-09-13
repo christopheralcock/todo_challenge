@@ -17,6 +17,13 @@ ToDo.prototype.tickItem = function(toDoItem) {
 	return this.doneList;
 };
 
+ToDo.prototype.deleteItem = function(doneItem) {
+  var index = this.doneList.indexOf(doneItem);
+  if (index >= 0) {
+    this.doneList.splice( index, 1 );
+  }
+}
+
 // app vvvvvvvvvvvvvvvvvv //
 
 toDo = new ToDo();
@@ -34,11 +41,23 @@ function addToDoneList(doneItem){
   updateDoneList();
 }
 
+function deleteFromDoneList(itemToDelete){
+  toDo.deleteItem(itemToDelete);
+  updateDoneList();
+};
+
 function updateToDoList(){
   var toDoLister = '';
   var item;
   for (item in toDo.toDoList) {
-      toDoLister +="<li>"+toDo.toDoList[item]+"<button id='tick' onclick='addToDoneList(\""+toDo.toDoList[item]+"\")'>"+"x"+"</li>";
+      toDoLister
+      +="<li>"
+      +toDo.toDoList[item]
+      +"<button id='tick' onclick='addToDoneList(\""
+      +toDo.toDoList[item]
+      +"\")'>"
+      +"x"
+      +"</li>";
   }
 	document.getElementById('to-do-list').innerHTML = toDoLister;
 };
@@ -50,6 +69,10 @@ function updateDoneList(){
       doneLister
       +="<li id='done-item'>"
       + toDo.doneList[item]
+      +"<button id='delete' onclick='deleteFromDoneList(\""
+      +toDo.doneList[item]
+      +"\")'>"
+      +"Delete"
       +"</li>";
   }
 	document.getElementById('done-list').innerHTML = doneLister;
