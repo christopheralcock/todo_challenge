@@ -4,9 +4,10 @@
   color: #5E807F;
 }
 
-body {
+.what-a-body {
   font-family: 'Arial Rounded MT Bold', Arial;
   background-color: #F5CB5C;
+  padding: 5px;
 }
 
 h3 {
@@ -46,7 +47,7 @@ li {
   font-family: 'Arial Rounded MT Bold', Arial;
   background-color: #17B890;
   color: #5E807F;
-  width: 100%;
+  width: 99%;
   border: 0px;
   text-align: center;
 }
