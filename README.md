@@ -1,5 +1,7 @@
 *A quick weekend challenge in my 8th week at Makers Academy, I took the opportunity to brush up on my vanilla js, having felt on slightly shaky ground after some tutorials in angular.  Very pleased with the job I did with the design.  If I had longer, I'd serve it on sinatra, add a log in and get persistence, to make it usable in the wild.*
 
+*To have a look at it, clone the repo and open the index.html file.*
+
 *Below follows the brief of the weekend challenge:*
 
 # Todo Challenge
