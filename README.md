@@ -1,3 +1,7 @@
+A quick weekend challenge in my 9th week at Makers Academy, I took the opportunity to brush up on my vanilla js, having felt on slightly shaky ground after some tutorials in angular.  Very pleased with the job I did with the design.  If I had longer, I'd serve it on sinatra, add a log in and get persistence, to make it usable in the wild.
+
+Below follows the brief of the weekend challenge:
+
 # Todo Challenge
 
 * Deadline: submit completed pull request by 9am on Monday
